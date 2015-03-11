@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout01"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:drawable/list_selector_background" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textColor="@color/Blue"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_alignParentRight="true"
+        android:padding="10dp"
+        android:background="@android:drawable/ic_menu_more"
+        android:contentDescription="@string/more_image" />
+
+    <LinearLayout
+        android:id="@+id/country_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_toLeftOf="@id/arrow"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <TextView
+            android:id="@+id/details"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.3"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/content_image"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:contentDescription="@string/header_image" />
+    </LinearLayout>
+
+</RelativeLayout>
